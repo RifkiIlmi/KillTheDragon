@@ -1,0 +1,58 @@
+h1,
+h2 {
+    font-size: 60px;
+    text-align: center;
+    font-family: cursive;
+    margin: 10px;
+}
+
+button {
+    display: block;
+    margin: auto;
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+    border: 1px solid black;
+    /* cursor: url(../img/sword1.png), auto; */
+    cursor: url(../img/sword1.png), auto;
+}
+
+.container:active {
+    cursor: url(../img/sword2.png), auto;
+}
+
+.awan {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    float: left;
+}
+
+.awan::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 100px;
+    background: url(../img/cloud.png) bottom center no-repeat;
+    background-size: 70%;
+    position: absolute;
+    bottom: -50px;
+}
+
+.dragon {
+    width: 100%;
+    height: 100%;
+    background: url(../img/dragoon.png) bottom center no-repeat;
+    background-size: 50%;
+    position: absolute;
+    top: 90px;
+    left: 9px;
+    transition: top 0.3s;
+}
+
+.awan.muncul .dragon {
+    top: -40px;
+}
